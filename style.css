@@ -1,0 +1,165 @@
+/* 1. Use a more-intuitive box-sizing model */
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+/* 2. Remove default margin */
+* {
+  margin: 0;
+}
+
+:root {
+  --clr-primary-hsl-400: 215, 51%, 70%;
+  --clr-primary-hsl-500: 178, 100%, 50%;
+
+  --clr-neutral-hsl-100: 217, 54%, 11%;
+  --clr-neutral-hsl-200: 216, 50%, 16%;
+  --clr-neutral-hsl-300: 215, 32%, 27%;
+  --clr-neutral-hsl-700: 0, 0%, 100%;
+
+  --clr-neutral-100: hsl(var(--clr-neutral-hsl-100));
+  --clr-neutral-200: hsl(var(--clr-neutral-hsl-200));
+  --clr-neutral-300: hsl(var(--clr-neutral-hsl-300));
+  --clr-neutral-700: hsl(var(--clr-neutral-hsl-700));
+
+  --clr-primary-400: hsl(var(--clr-primary-hsl-400));
+  --clr-primary-500: hsla(var(--clr-primary-hsl-500));
+}
+
+body {
+  /* 3. Add accessible line-height */
+  line-height: 1.5;
+  /* 4. Improve text rendering */
+  -webkit-font-smoothing: antialiased;
+  font-family: "Outfit", sans-serif;
+  background-color: var(--clr-neutral-100);
+  color: var(--clr-primary-400);
+  min-height: 100vh;
+  place-content: center;
+}
+
+/* 5. Improve media defaults */
+img,
+picture,
+video,
+canvas,
+svg {
+  display: block;
+  max-width: 100%;
+}
+
+/* 6. Inherit fonts for form controls */
+input,
+button,
+textarea,
+select {
+  font: inherit;
+}
+
+/* 7. Avoid text overflows */
+p,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  overflow-wrap: break-word;
+}
+
+/* 8. Improve line wrapping */
+p {
+  text-wrap: pretty;
+}
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  text-wrap: balance;
+}
+
+/*
+  9. Create a root stacking context
+*/
+#root,
+#__next {
+  isolation: isolate;
+}
+
+.nft {
+  display: grid;
+  justify-content: center;
+  gap: 15px;
+  background-color: hsl(var(--clr-neutral-hsl-200));
+  padding: 1.75rem;
+   max-width: 335px;
+  margin: auto;
+  border-radius: 15px;
+  box-shadow: 0 0 0 20px hsl(var(--clr-neutral-hsl-100));
+}
+
+.styled-line {
+  border: none; /* Remove the default border */
+  height: 0.1px; /* Set the line thickness */
+  background-color: lightgray; /* Set the color of the line */
+  width: 100%;
+}
+
+.creation {
+  display: flex;
+  align-items: center;
+}
+
+.avatar {
+  height: auto;
+  width: 30px;
+  box-shadow: 0 0 0 1px #dcedf8; /* Adjust color and thickness */
+  border-radius: 50%;
+  
+}
+
+.image {
+  border-radius: 10px;
+
+}
+
+.nft-number {
+  display: grid;
+  justify-content: start;
+  color: var(--clr-neutral-700);
+}
+
+.wallet {
+  display: flex;
+  justify-content: space-between;
+}
+
+.balance {
+  display: flex;
+  align-items: center;
+}
+.balance-n {
+  margin-left: 5px;
+  color: var(--clr-primary-500);
+}
+
+.time {
+  display: flex;
+  align-items: center;
+}
+
+.balance-time {
+  margin-left: 5px;
+}
+
+.creat {
+  margin-left: 9px;
+}
+
+.creat span {
+  color: var(--clr-neutral-700);
+}
